@@ -12,7 +12,7 @@ async function getTokens() {
   results = "Connecting to " + net + "...";
   document.getElementById("resultField").value = results;
   await client.connect();
-  results += "\nConnected. Getting Ridworld NFTs on Xahau...";
+  results += "\nConnected. Getting Ridworld URITokens on Xahau...";
   document.getElementById("resultField").value = results;
 
   await client.connect();
@@ -23,14 +23,14 @@ async function getTokens() {
     limit: 400,
   });
   //console.log(response);
-  /*console.log("\nNFTs:\n " + JSON.stringify(response, null, 2));
-  results += "\nNFTs:\n " + JSON.stringify(response, null, 2);
+  /*console.log("\nURITokens:\n " + JSON.stringify(response, null, 2));
+  results += "\nURITokens:\n " + JSON.stringify(response, null, 2);
   document.getElementById("resultField").value = results;*/
 
   const objects = response.result.account_objects;
   //console.log(objects);
-  console.log("\nNFTs:\n " + JSON.stringify(objects, null, 2));
-  results += "\nNFTs:\n " + JSON.stringify(objects, null, 2);
+  console.log("\nURITokens:\n " + JSON.stringify(objects, null, 2));
+  results += "\nURITokens:\n " + JSON.stringify(objects, null, 2);
   document.getElementById("resultField").value = results;
 
   client.disconnect();
